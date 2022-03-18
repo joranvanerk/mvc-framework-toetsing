@@ -8,7 +8,7 @@
 
 
         public function getFruits() {
-            $this->db->query("SELECT * FROM fruit");
+            $this->db->query("SELECT * FROM country");
 
             $result = $this->db->resultSet();
 
