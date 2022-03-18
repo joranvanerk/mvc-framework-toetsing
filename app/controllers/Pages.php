@@ -1,19 +1,18 @@
 <?php
 class Pages extends Controller {
     public function __construct() {
-        $this->userModel = $this->model('Countries');
-
+        // $this->userModel = $this->model('User');
     }
 
-
     public function index() {
-        $country = $this->userModel -> getCountries();
+        // $users = $this->userModel->getUsers();
 
         $data = [
             'title' => 'Home page',
-            'country' => $country
+            // 'users' => $users
         ];
-
+        
         $this->view('index', $data);
     }
 }
+?>

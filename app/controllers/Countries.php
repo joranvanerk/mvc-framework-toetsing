@@ -1,19 +1,26 @@
 <?php
 class Countries extends Controller {
     public function __construct() {
-        $this->userModel = $this->model('country');
-
+        $this->countriesModel = $this->model('Country');
     }
 
-
     public function index() {
-        $country = $this->userModel -> getCountries();
-
+        $countries = $this->countriesModel->getCountries();
+        $rows = "";
+        foreach ($countries as $value) {
+                $rows .='<tr>
+                  <td style="width: 10%;">' . $value->id . '</td>
+                  <td>' . $value->name . '</td>
+                  <td>' . $value->capitalCity . '</td>
+                  <td>' . $value->continent . '</td>
+                  <td>' . $value->population . '</td>
+                </tr>';
+        }
         $data = [
-            'title' => 'Home page',
-            'country' => $country
+            'title' => 'Landen',
+            'countries' => $rows
         ];
 
-        $this->view('index', $data);
+        $this->view('countries/index', $data);
     }
 }
