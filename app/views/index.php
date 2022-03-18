@@ -10,13 +10,13 @@
   </tr>
 <?php
 
-foreach ($data['fruit'] as $fruit) {
+foreach ($data['country'] as $country) {
     echo '<tr>
-      <td style="width: 10%;">' . $fruit->id . '</td>
-      <td>' . $fruit->name . '</td>
-      <td>' . $fruit->capitalCity . '</td>
-      <td>' . $fruit->continent . '</td>
-      <td>' . $fruit->population . '</td>
+      <td style="width: 10%;">' . $country->id . '</td>
+      <td>' . $country->name . '</td>
+      <td>' . $country->capitalCity . '</td>
+      <td>' . $country->continent . '</td>
+      <td>' . $country->population . '</td>
     </tr>';
 }
 

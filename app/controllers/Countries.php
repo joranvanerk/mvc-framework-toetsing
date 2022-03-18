@@ -1,17 +1,17 @@
 <?php
-class Pages extends Controller {
+class Countries extends Controller {
     public function __construct() {
-        $this->userModel = $this->model('Fruit');
+        $this->userModel = $this->model('country');
 
     }
 
 
     public function index() {
-        $fruit = $this->userModel -> getFruits();
+        $country = $this->userModel -> getCountries();
 
         $data = [
             'title' => 'Home page',
-            'fruit' => $fruit
+            'country' => $country
         ];
 
         $this->view('index', $data);

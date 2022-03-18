@@ -1,5 +1,5 @@
 <?php
-    class Fruit {
+    class Country {
         private $db;
 
         public function __construct() {
@@ -7,7 +7,7 @@
         }
 
 
-        public function getFruits() {
+        public function getCountries() {
             $this->db->query("SELECT * FROM country");
 
             $result = $this->db->resultSet();
